@@ -23,10 +23,13 @@ four pillars of Object-Oriented Programming (OOP).
 Use the following questions to guide your exploration and learning! 🗺
 
 - Run your Console application, what is it doing? What is being outputted to the console?
+Ans: The application is making object of `DodgyBankAccount` first. After the account is created and an amount is deposited then we see that a reward is added to the acount. The `DodgyBankAccount` object is then used to add rewards directly. After seeing that the account balance is accessible and can be changed then the object is used to change the balance of the account itself. In the second half of the execution, the `SecureBankAccount` class object is created with an account number. An amount is deposited so a reward is added to account as before. Then Code tries to add rewards directly and then change the amount in the account but it is not possible because the methods and fields are private in the class so they can not be accessed.
 
 - Look at the `DodgyBankAccount`, this class is not well-encapsulated. Can you note down the problems with how the class is designed, and the ways it is being misused?
+Ans: In the class, the variables are not private so they can be accessed outside of the class. Same is true for the important methods that are used to add amounts to the bank account.
 
 - Compare and contrast the `DodgyBankAccount` and the `SecureBankAccount`, how is the `SecureBankAccount` different to the `DodgyBankAccount`? How is it designed to prevent it from being misused? Are there instances of better method names for clearer abstraction?
+Ans: In the `SecureBankAccount`, the important variables and methods are private so they can not be accessed outside the class and as such the class is secure.
 
 ---
 ## 🐸 Extension Challenge
