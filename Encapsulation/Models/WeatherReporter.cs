@@ -3,36 +3,41 @@ namespace Encapsulation.Models
 {
     public class WeatherReporter
     {
-        public string Location;
-        public double Temperature;
+        private string _location;
+        private double _temperature;
+        private const string LONDON = "London";
+        private const string CALIFORNIA = "California";
+        private const string CAPE_TOWN = "Cape Town";
+        private const int THIRTY = 30;
+        private const int TEN = 10;
 
         public WeatherReporter(string location, double temperature)
         {
-            Location = location;
-            Temperature = temperature;
+            _location = location;
+            _temperature = temperature;
         }
 
         public string Print()
         {
-            double newTemp = (9.0 / 5.0) * Temperature + 32;
-            return $"I am in {Location} and it is {Check1()}. {Check2()}. The temperature in Fahrenheit is {newTemp}.";
+            double newTemp = (9.0 / 5.0) * _temperature + 32;
+            return $"I am in {_location} and it is {Check1()}. {Check2()}. The temperature in Fahrenheit is {newTemp}.";
         }
 
-        public string Check1()
+        private string Check1()
         {
-            if (Location == "London")
+            if (_location == LONDON)
             {
 
                 return "🌦";
 
             }
-            else if (Location == "California")
+            else if (_location == CALIFORNIA)
             {
 
                 return "🌅";
 
             }
-            else if (Location == "Cape Town")
+            else if (_location == CAPE_TOWN)
             {
 
                 return "🌤";
@@ -41,15 +46,15 @@ namespace Encapsulation.Models
             return "🔆";
         }
 
-        public string Check2()
+        private string Check2()
         {
-            if (Temperature > 30)
+            if (_temperature > THIRTY)
             {
 
                 return "It's too hot 🥵!";
 
             }
-            else if (Temperature < 10)
+            else if (_temperature < TEN)
             {
 
                 return "It's too cold 🥶!";
